@@ -2,10 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { stripe } from "@/lib/stripe";
 import Stripe from "stripe";
 
-// Disable Next.js body parsing — Stripe needs the raw body for signature verification
-export const config = {
-  api: { bodyParser: false },
-};
+export const runtime = "nodejs";
 
 export async function POST(req: NextRequest) {
   const body = await req.text();
