@@ -29,7 +29,7 @@ export async function POST(req: NextRequest) {
   // Handle events
   switch (event.type) {
     case "checkout.session.completed": {
-      const session = event.data.object as Stripe.CheckoutSession;
+      const session = event.data.object as Stripe.Checkout.Session;
       console.log("New subscription started:", session.id, session.customer_email);
       // TODO: Store subscription status in your database
       // e.g., create/update user record with their tier level
