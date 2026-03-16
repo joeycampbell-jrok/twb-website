@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/Users/josephcampbell/Desktop/Claude Web Project/app/layout\":[\"static/media/c6f9f4935a94000f-s.p.woff2\",\"static/media/2744d89d6f68a673-s.p.woff2\",\"static/media/02c8cea6cb5ab5f0-s.p.woff2\",\"static/media/03fb38b812b1ca85-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"

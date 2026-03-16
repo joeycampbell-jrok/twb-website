@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-bangers: "Bangers", cursive;
+  --font-comic-neue: "Comic Neue", cursive;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0D0D0D;
+  color: #F8F9FA;
+  font-family: var(--font-comic-neue), "Comic Sans MS", cursive;
+}
+
+/* Comic halftone background */
+.halftone-bg {
+  background-image: radial-gradient(circle, rgba(255, 224, 0, 0.08) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Comic panel border */
+.comic-panel {
+  border: 3px solid #FFE000;
+  box-shadow: 5px 5px 0px #000;
+  background-color: #1A1A1A;
+}
+
+/* Speech bubble style */
+.speech-bubble {
+  position: relative;
+  background: #FFE000;
+  color: #0D0D0D;
+  border: 3px solid #0D0D0D;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-family: var(--font-bangers);
+  letter-spacing: 0.05em;
+}
+
+.speech-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -14px;
+  left: 20px;
+  border-width: 14px 10px 0;
+  border-style: solid;
+  border-color: #0D0D0D transparent transparent transparent;
+}
+
+.speech-bubble::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 22px;
+  border-width: 12px 8px 0;
+  border-style: solid;
+  border-color: #FFE000 transparent transparent transparent;
+  z-index: 1;
+}
+
+/* Skew divider */
+.skew-divider {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+/* Action text effect */
+.action-text {
+  font-family: var(--font-bangers);
+  letter-spacing: 0.05em;
+  -webkit-text-stroke: 2px #000;
+  paint-order: stroke fill;
+}
+
+/* Stripe / speed lines */
+.speed-lines {
+  background: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 4px,
+    rgba(255, 224, 0, 0.04) 4px,
+    rgba(255, 224, 0, 0.04) 8px
+  );
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #1A1A1A;
+}
+::-webkit-scrollbar-thumb {
+  background: #FFE000;
+  border-radius: 0;
+}
