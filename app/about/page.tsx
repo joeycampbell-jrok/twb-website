@@ -16,12 +16,16 @@ export default function AboutPage() {
       <div className="max-w-4xl mx-auto px-4 py-14">
         {/* Artist section */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-14">
-          {/* Avatar placeholder */}
-          <div className="comic-panel aspect-square flex items-center justify-center relative overflow-hidden">
-            <div className="absolute inset-0 speed-lines opacity-20" />
-            <div className="text-center z-10">
-              <div className="font-bangers text-8xl text-twb-yellow/20 mb-2">TWB</div>
-              <div className="font-bangers text-sm text-twb-white/30 tracking-widest">[ARTIST PHOTO]</div>
+          {/* Avatar */}
+          <div className="comic-panel aspect-square relative overflow-hidden">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/franny-da-goat.jpg"
+              alt="Franny Da Goat"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-twb-black/80 py-2 text-center">
+              <span className="font-bangers text-lg text-twb-yellow tracking-widest">FRANNY DA GOAT</span>
             </div>
           </div>
 
@@ -29,7 +33,7 @@ export default function AboutPage() {
           <div className="flex flex-col justify-center">
             <div className="inline-block mb-4">
               <div className="speech-bubble text-twb-black font-bangers text-xl tracking-widest">
-                HI, I&apos;M THE ARTIST
+                HI, I&apos;M FRANNY DA GOAT
               </div>
             </div>
             <div className="mt-6 space-y-4">
