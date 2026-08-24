@@ -12,18 +12,12 @@ const comics = [
 
 const tierColors: Record<string, string> = {
   noob: "#2A2A2A",
-  pro: "#1A3A5C",
-  expert: "#1A3A1A",
-  hacker: "#2A1A3A",
   meister: "#3A2A00",
   diamond: "#001A2A",
 };
 
 const tierTextColors: Record<string, string> = {
   noob: "#F8F9FA",
-  pro: "#7EC8E3",
-  expert: "#7ED87E",
-  hacker: "#C87ED8",
   meister: "#FFE000",
   diamond: "#A8D8FF",
 };
