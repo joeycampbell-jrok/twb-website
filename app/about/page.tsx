@@ -38,14 +38,15 @@ export default function AboutPage() {
             </div>
             <div className="mt-6 space-y-4">
               <p className="font-comic text-twb-white/80 leading-relaxed">
-                The Weird Book started as a notebook. Then the notebook got weird. Then the notebook got a website.
+                Franny Da Goat started with a pencil. Then the drawings got weird.
+                Then the weird drawings became comics.
               </p>
               <p className="font-comic text-twb-white/80 leading-relaxed">
-                Every strip you see here is drawn by hand — no AI, no templates, no rules.
-                Just a pen, some paper, and an imagination that doesn&apos;t know when to stop.
+                Every comic comes straight from his brain — video games, sports, jokes, characters,
+                and whatever else makes him laugh. Sometimes his sister SCC and other artists jump in too.
               </p>
               <p className="font-comic text-twb-white/80 leading-relaxed">
-                New strips drop every week. Subscribe to get them as they happen.
+                Franny is 10 years old. Stick around and see what he draws next.
               </p>
             </div>
           </div>
@@ -54,7 +55,7 @@ export default function AboutPage() {
         {/* Stats */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-14">
           {[
-            { stat: "???", label: "Strips Published" },
+            { stat: "7", label: "Strips Published" },
             { stat: "100%", label: "Hand Drawn" },
             { stat: "0%", label: "Normal Content" },
             { stat: "∞", label: "Weirdness Level" },
@@ -72,8 +73,8 @@ export default function AboutPage() {
           <div className="space-y-4 font-comic text-twb-white/70 leading-relaxed">
             <p>
               The Weird Book didn&apos;t have a plan. It never does. One day there was a strip about a void.
-              Then another about socks. Then a government cat. Before long there was a whole world of strange —
-              and it needed somewhere to live.
+              Then a comeback three-pointer. Then a stickman transformation. Before long there was a whole
+              world of strange — and it needed somewhere to live.
             </p>
             <p>
               This website is that somewhere. A place where the strips can exist, where readers can find them,
