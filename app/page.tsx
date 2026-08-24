@@ -2,11 +2,11 @@ import Link from "next/link";
 import SubscriptionCard from "@/components/SubscriptionCard";
 import { tiers } from "@/lib/tiers";
 
-// Featured comic strip placeholders
+// Three most recent comics — keep in sync with app/comics/page.tsx
 const featuredStrips = [
-  { id: 1, title: "The Void Stares Back", issue: "#001", tier: "Noob" },
-  { id: 2, title: "Tuesday in Dimension X", issue: "#002", tier: "Noob" },
-  { id: 3, title: "My Cat Is a Government Agent", issue: "#003", tier: "Pro" },
+  { id: 5, title: "Weirdmania", issue: "#005", tier: "Noob", image: "/comics/weirdmania.jpg" },
+  { id: 6, title: "Random Stories", issue: "#006", tier: "Noob", image: "/comics/random-stories.jpg" },
+  { id: 7, title: "Native American Story", issue: "#007", tier: "Noob", image: "/comics/native-american-story.jpg" },
 ];
 
 export default function HomePage() {
@@ -38,8 +38,8 @@ export default function HomePage() {
           </h1>
 
           <p className="font-comic text-lg sm:text-xl text-twb-white/70 max-w-xl mb-8 leading-relaxed">
-            Comic strips that don&apos;t follow the rules. Weird characters, weirder stories.
-            Start free — go Diamond if you dare.
+            Comic strips for weird lovers. Stories, characters, and drawings you&apos;ve never seen.
+            Start free. Or subscribe. The choice is yours.
           </p>
 
           <div className="flex flex-wrap gap-4">
@@ -72,15 +72,14 @@ export default function HomePage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {featuredStrips.map((strip) => (
             <div key={strip.id} className="comic-panel group cursor-pointer hover:translate-x-[-3px] hover:translate-y-[-3px] hover:shadow-[8px_8px_0px_#FFE000] transition-all">
-              {/* Comic panel placeholder */}
+              {/* Comic panel */}
               <div className="aspect-[4/3] bg-twb-gray flex items-center justify-center border-b-3 border-twb-yellow relative overflow-hidden">
-                <div className="absolute inset-0 speed-lines opacity-30" />
-                <div className="text-center z-10">
-                  <div className="font-bangers text-5xl text-twb-yellow/20 mb-2">{strip.issue}</div>
-                  <div className="font-bangers text-lg text-twb-white/40 tracking-widest px-4 text-center">
-                    [COMIC STRIP HERE]
-                  </div>
-                </div>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={strip.image}
+                  alt={strip.title}
+                  className="absolute inset-0 w-full h-full object-cover object-top"
+                />
                 {/* Tier badge */}
                 <div className={`absolute top-2 right-2 font-bangers text-xs tracking-widest px-2 py-0.5 border ${
                   strip.tier === "Noob"
@@ -112,7 +111,7 @@ export default function HomePage() {
           <div className="mt-10">
             <p className="font-comic text-lg text-twb-white/80 leading-relaxed max-w-2xl mx-auto">
               Every strip in The Weird Book is drawn by hand by one artist with a seriously strange imagination.
-              No AI. No filters. Just pure, unhinged creativity — one panel at a time.
+              No AI. No filters. Just pure creativity, one panel at a time.
             </p>
             <Link
               href="/about"
