@@ -20,7 +20,6 @@ export default function Footer() {
               {[
                 { href: "/comics", label: "Comics" },
                 { href: "/subscribe", label: "Subscribe" },
-                { href: "/shop", label: "Shop" },
                 { href: "/about", label: "About" },
               ].map((link) => (
                 <li key={link.href}>
