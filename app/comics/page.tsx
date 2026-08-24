@@ -1,16 +1,13 @@
 import { tiers } from "@/lib/tiers";
 
-// Comic strip catalog — replace with real data / CMS later
 const comics = [
-  { id: 1, title: "The Void Stares Back", issue: "#001", tierRequired: "noob", description: "A man stares into a void. The void has opinions." },
-  { id: 2, title: "Tuesday in Dimension X", issue: "#002", tierRequired: "noob", description: "Tuesdays are bad enough already." },
-  { id: 3, title: "My Cat Is a Government Agent", issue: "#003", tierRequired: "pro", description: "The evidence is overwhelming." },
-  { id: 4, title: "The Last Waffle", issue: "#004", tierRequired: "noob", description: "An epic battle for breakfast." },
-  { id: 5, title: "Wi-Fi Password: Unknown", issue: "#005", tierRequired: "expert", description: "Tragedy in four panels." },
-  { id: 6, title: "Time Traveller's Regrets", issue: "#006", tierRequired: "pro", description: "He went back to fix one thing. It got weird." },
-  { id: 7, title: "The Chair That Knew Too Much", issue: "#007", tierRequired: "hacker", description: "Furniture has feelings. This one has secrets." },
-  { id: 8, title: "Quantum Sock Mystery", issue: "#008", tierRequired: "noob", description: "Where do they GO?" },
-  { id: 9, title: "Elevator Small Talk", issue: "#009", tierRequired: "meister", description: "29 floors. No escape." },
+  { id: 1, title: "Random Comics #1", issue: "#001", tierRequired: "noob", description: "The debut issue. We understand if you don't like these comics.", image: "/comics/random-comics-1.jpg" },
+  { id: 2, title: "The Void Stares Back", issue: "#002", tierRequired: "noob", description: "The cycle begins again. They lived, just forgot all memories as human.", image: "/comics/the-void-stares-back.jpg" },
+  { id: 3, title: "Stickman Power #1", issue: "#003", tierRequired: "noob", description: "Stickman transformation. Merge transformation. Karate chop.", image: "/comics/stickman-power-1.jpg" },
+  { id: 4, title: "My Glory", issue: "#004", tierRequired: "noob", description: "The time I got an AND 1 after making a three pointer in basketball.", image: "/comics/my-glory.jpg" },
+  { id: 5, title: "Weirdmania", issue: "#005", tierRequired: "noob", description: "Crazy hairstyles, known comics, and a whole lot of BRUH.", image: "/comics/weirdmania.jpg" },
+  { id: 6, title: "Random Stories", issue: "#006", tierRequired: "noob", description: "He picks his boogers. Only 1% of people can read this.", image: "/comics/random-stories.jpg" },
+  { id: 7, title: "Native American Story", issue: "#007", tierRequired: "noob", description: "The gift of the salmon — they clean it thoroughly and share with everyone.", image: "/comics/native-american-story.jpg" },
 ];
 
 const tierColors: Record<string, string> = {
@@ -94,11 +91,22 @@ export default function ComicsPage() {
                       </span>
                     </div>
                   )}
-                  <div className="absolute inset-0 speed-lines opacity-20" />
-                  <div className="text-center z-0">
-                    <div className="font-bangers text-6xl text-twb-yellow/10">{comic.issue}</div>
-                    <div className="font-bangers text-sm text-twb-white/20 tracking-widest">[STRIP]</div>
-                  </div>
+                  {comic.image ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={comic.image}
+                      alt={comic.title}
+                      className="absolute inset-0 w-full h-full object-cover object-top"
+                    />
+                  ) : (
+                    <>
+                      <div className="absolute inset-0 speed-lines opacity-20" />
+                      <div className="text-center z-0">
+                        <div className="font-bangers text-6xl text-twb-yellow/10">{comic.issue}</div>
+                        <div className="font-bangers text-sm text-twb-white/20 tracking-widest">[STRIP]</div>
+                      </div>
+                    </>
+                  )}
 
                   {/* Tier badge */}
                   <div
@@ -120,10 +128,14 @@ export default function ComicsPage() {
                   </h3>
                   <p className="font-comic text-sm text-twb-white/50">{comic.description}</p>
 
-                  {!isLocked && (
-                    <button className="mt-3 font-bangers text-sm tracking-widest text-twb-yellow border border-twb-yellow px-3 py-1 hover:bg-twb-yellow hover:text-twb-black transition-all">
+                  {!isLocked && comic.image && (
+                    <a
+                      href={comic.image}
+                      download
+                      className="mt-3 inline-block font-bangers text-sm tracking-widest text-twb-yellow border border-twb-yellow px-3 py-1 hover:bg-twb-yellow hover:text-twb-black transition-all"
+                    >
                       DOWNLOAD ↓
-                    </button>
+                    </a>
                   )}
 
                   {isLocked && (
