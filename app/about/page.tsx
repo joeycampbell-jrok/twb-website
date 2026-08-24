@@ -72,17 +72,17 @@ export default function AboutPage() {
           <h2 className="font-bangers text-3xl text-twb-yellow tracking-widest mb-6">HOW IT STARTED</h2>
           <div className="space-y-4 font-comic text-twb-white/70 leading-relaxed">
             <p>
-              The Weird Book didn&apos;t have a plan. It never does. One day there was a strip about a void.
-              Then a comeback three-pointer. Then a stickman transformation. Before long there was a whole
-              world of strange — and it needed somewhere to live.
+              Franny Da Goat grew up on graphic novels, comics, manga, anime, and video games.
+              Since he was just a tiny little guy, his dad would tell him and his sister silly
+              stories and wild fairy tales.
             </p>
             <p>
-              This website is that somewhere. A place where the strips can exist, where readers can find them,
-              and where subscribers can go deeper into the weird.
+              Franny always loved action, adventure, and comedy. Especially the weirdest stuff.
+              Then he discovered he could make comics himself and use technology to build a website
+              where people could actually read them.
             </p>
             <p>
-              Everything here is made with care. The art is real. The weird is genuine.
-              Thanks for being part of it.
+              So he did. The rest is THWDBK history.
             </p>
           </div>
         </div>
